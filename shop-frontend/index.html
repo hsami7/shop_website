@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Name</title>
+</head>
+
+<body>
+    <header>
+        <h1>Shop Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-products">
+            <article class="product">
+                <img src="../d291b38e171c80734cab809e19f1404b.jpg" alt="Product 1">
+                <h2>BAHIA</h2>
+                <p>$19.99</p>
+                <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="../d291b38e171c80734cab809e19f1404b.jpg" alt="Product 2">
+                <h2>BAHIA</h2>
+                <p>$24.99</p>
+                <button onclick="addToCart('Product 2', 24.99)">Add to Cart</button>
+            </article>
+            <!-- Add more products here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Shop Name. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

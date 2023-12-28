@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Shop Name - Cart</title>
+</head>
+
+<body>
+    <header>
+        <h1>Your Shop Name - Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Shop Name. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
