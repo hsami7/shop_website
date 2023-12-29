@@ -55,7 +55,7 @@ body {
 
 .container {
     display: grid;
-    width: 97%;
+    width: 98%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto;
@@ -228,7 +228,7 @@ main .date input[type="date"] {
 main .insights {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.6rem;
+    gap: 1.0rem;
 }
 
 main .insights > div {
@@ -263,10 +263,81 @@ main .insights > div.income span {
 main .insights > div .middle {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: auto;
+
 }
 
 main .insights h3 {
     margin: 1rem 0 0.6rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
+}
+
+main .insights > div .middle h1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.insights > div .top_of_class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insights .sales .top_of_class .adjust {
+    padding-right: 20%;
+}
+
+.insights .expenses .top_of_class .adjust {
+    padding-right: 5%;
+}
+
+.insights .income .top_of_class .adjust {
+    padding-right: 10%;
+}
+
+.insights .num_of_client .top_of_class .adjust {
+    padding-right: 10%;
+}
+
+main .insights small {
+    margin-top: 1.4rem;
+    display: block  ;
+}
+
+/* ===================== RECENT ORDERS ===================== */
+
+main .recent-orders {
+    margin: 2rem;
+}
+
+main .recent-orders table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-orders a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
 }
