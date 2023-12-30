@@ -10,6 +10,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Dashboard</title>
 </head>
 
@@ -52,59 +54,85 @@
         </aside>
         <!-------------------- END OF ASIDE -------------------->
         <main>
-            <h1>Dashboard</h1>
-
-            <div class="date">
-                <input type="date">
+            <div class="header">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <div class="date">
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <div class="theme-toggler">
+                            <span class="material-symbols-outlined active">light_mode</span>
+                            <span class="material-symbols-outlined">dark_mode</span>
+                        </div>
+                        <div class="profile">
+                            <!-- <p>Hey, <b>Hatim</b></p> -->
+                            <!-- <small class="text-muted">Admin</small> -->
+                            <h3>Admin</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-
             <div class="insights">
                 <div class="sales">
                     <div class="middle">
                         <div class="top_of_class">
                             <span class="material-symbols-outlined">analytics</span>
-                            <div class="adjust"><h3>Total Sales</h3></div>
+                            <div class="adjust">
+                                <h3>Total Sales</h3>
+                            </div>
                         </div>
                         <h1>35,234 DH</h1>
                     </div>
                     <small class="text-muted">Last 24 Hours</small>
                 </div>
-        <!-------------------- END OF SALES -------------------->
+                <!-------------------- END OF SALES -------------------->
                 <div class="expenses">
                     <div class="middle">
                         <div class="top_of_class">
                             <span class="material-symbols-outlined"> bar_chart</span>
-                            <div class="adjust"><h3>Total Expenses</h3></div>
+                            <div class="adjust">
+                                <h3>Total Expenses</h3>
+                            </div>
                         </div>
                         <h1>27,064 DH</h1>
                     </div>
                     <small class="text-muted">Last 24 Hours</small>
                 </div>
-        <!-------------------- END OF EXPENSES -------------------->
+                <!-------------------- END OF EXPENSES -------------------->
                 <div class="income">
                     <div class="middle">
                         <div class="top_of_class">
-                        <span class="material-symbols-outlined">stacked_line_chart</span>
-                        <div class="adjust"><h3>Total Income</h3></div>
+                            <span class="material-symbols-outlined">stacked_line_chart</span>
+                            <div class="adjust">
+                                <h3>Total Income</h3>
+                            </div>
                         </div>
                         <h1>10,542 DH</h1>
                     </div>
                     <small class="text-muted">Last 24 Hours</small>
                 </div>
-        <!-------------------- END OF INCOME -------------------->
+                <!-------------------- END OF INCOME -------------------->
                 <div class="num_of_client">
                     <div class="middle">
                         <div class="top_of_class">
-                        <span class="material-symbols-outlined">stress_management</span>
-                        <div class="adjust"><h3>N° of Clients</h3></div>
+                            <span class="material-symbols-outlined">stress_management</span>
+                            <div class="adjust">
+                                <h3>N° of Clients</h3>
+                            </div>
                         </div>
                         <h1>4033 clients</h1>
                     </div>
                     <small class="text-muted">Last 30 Day's</small>
                 </div>
-        <!-------------------- END OF NUM_OF_CLIENT -------------------->
+                <!-------------------- END OF NUM_OF_CLIENT -------------------->
             </div>
-        <!-------------------- END OF INSIGHTS -------------------->
+            <!-------------------- END OF INSIGHTS -------------------->
             <div class="recent-orders">
                 <h2>Recent Orders</h2>
                 <table>
@@ -146,18 +174,23 @@
                             <td class="warning">Pending</td>
                             <td class="primary">Details</td>
                         </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hatim Sami</td>
+                            <td>Water</td>
+                            <td>8753</td>
+                            <td>Paid</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
                     </tbody>
                 </table>
                 <a href="#">Show All</a>
             </div>
         </main>
         <!-------------------- END OF MAIN -------------------->
-        <div class="right">
-            <div class="top">
-                
-            </div>
-        </div>
     </div>
+
 </body>
 
 </html>

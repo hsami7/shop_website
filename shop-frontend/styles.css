@@ -51,6 +51,7 @@ body {
     user-select: none;
     overflow: hidden;
     color: var(--color-dark);
+    overflow-y: auto;
 }
 
 .container {
@@ -59,6 +60,7 @@ body {
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto;
+    min-height: 100vh;
 }
 
 a {
@@ -74,28 +76,28 @@ h2 {
     font-size: 1.9rem;
 }
 
-h3 { 
+h3 {
     font-size: 0.87rem;
 }
 
-h4 { 
+h4 {
     font-size: 0.8rem;
 }
 
-h5 { 
+h5 {
     font-size: 0.77rem;
 }
 
-small { 
+small {
     font-size: 0.75rem;
 }
 
-.profile-photo {
+/* .profile-photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
-}
+} */
 
 .text-muted {
     color: var(--color-info-dark);
@@ -129,7 +131,7 @@ aside {
     height: 100vh;
 }
 
-aside .top{
+aside .top {
     background: white;
     display: flex;
     align-items: center;
@@ -186,14 +188,14 @@ aside .sidebar a.active {
     margin-left: 0;
 }
 
-aside .sidebar a.active:before{
+aside .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 100%;
     background: var(--color-primary);
 }
 
-aside .sidebar a.active span{
+aside .sidebar a.active span {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
 }
@@ -210,6 +212,7 @@ aside .sidebar a:hover span {
 
 main {
     margin-top: 1.4rem;
+
 }
 
 main .date {
@@ -231,7 +234,7 @@ main .insights {
     gap: 1.0rem;
 }
 
-main .insights > div {
+main .insights>div {
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -240,11 +243,11 @@ main .insights > div {
     box-shadow: var(--box-shadow);
 }
 
-main .insights > div:hover {
+main .insights>div:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-main .insights > div span {
+main .insights>div span {
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
@@ -252,15 +255,15 @@ main .insights > div span {
     font-size: 2rem;
 }
 
-main .insights > div.expenses span {
+main .insights>div.expenses span {
     background: var(--color-danger);
 }
 
-main .insights > div.income span {
+main .insights>div.income span {
     background: var(--color-success);
 }
 
-main .insights > div .middle {
+main .insights>div .middle {
     display: flex;
     flex-direction: column;
     align-items: auto;
@@ -272,14 +275,14 @@ main .insights h3 {
     font-size: 1.3rem;
 }
 
-main .insights > div .middle h1 {
+main .insights>div .middle h1 {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
     padding-top: 10px;
 }
 
-.insights > div .top_of_class {
+.insights>div .top_of_class {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -303,7 +306,7 @@ main .insights > div .middle h1 {
 
 main .insights small {
     margin-top: 1.4rem;
-    display: block  ;
+    display: block;
 }
 
 /* ===================== RECENT ORDERS ===================== */
@@ -312,7 +315,7 @@ main .recent-orders {
     margin: 2rem;
 }
 
-main .recent-orders table{
+main .recent-orders table {
     background: var(--color-white);
     width: 100%;
     border-radius: var(--card-border-radius);
@@ -331,7 +334,7 @@ main table tbody td {
     border-bottom: 1px solid var(--color-light);
 }
 
-main table tbody tr:last-child td{
+main table tbody tr:last-child td {
     border: none;
 }
 
@@ -340,4 +343,80 @@ main .recent-orders a {
     display: block;
     margin: 1rem auto;
     color: var(--color-primary);
+}
+
+/* ===================== TOP RIGHT ===================== */
+
+main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.profile p {
+    margin: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.right .top {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    padding-left: 60%;
+    padding-bottom: 50%;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+main .right .profile h3 {
+    font-size: 1.2rem;
+    color: var(--color-dark-variant);
 }
