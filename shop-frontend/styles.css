@@ -151,6 +151,15 @@ aside .top {
     color: #0519b1; /* logo color */
 }
 
+aside .top a {
+    color: #0519b1;
+    text-decoration: none;
+}
+
+aside .top a:hover {
+    color: #0519b1;
+}
+
 aside .close {
     display: none;
 }

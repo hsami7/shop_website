@@ -62,3 +62,14 @@ sideBar.addEventListener("click", (event) => {
     clickedItem.classList.add("active");
   }
 });
+
+if (!localStorage.getItem("theme")) {
+  document.body.classList.add("dark-theme-variables");
+  themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+  localStorage.setItem("theme", "dark");
+} else {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme-variables");
+    themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+  }
+}
