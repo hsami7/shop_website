@@ -1,49 +1,64 @@
 // admin.js
 
-// Assuming you have a 'products' array in localStorage
-let products = JSON.parse(localStorage.getItem("products")) || [];
+const sideMenu = document.querySelector("aside");
+const sideBar = document.querySelector(".sidebar");
+const menuBtn = document.querySelector("#menu-btn");
+const closeBtn = document.querySelector("#close_btn");
+const themeToggler = document.querySelector(".theme-toggler");
 
-// Function to add a new product
-function addProduct() {
-  const title = prompt("Enter product title:");
-  const price = parseFloat(prompt("Enter product price:"));
-  const category = prompt("Enter product category:");
+// show sidebar
+menuBtn.addEventListener("click", () => {
+  sideMenu.style.display = "block";
+});
 
-  if (title && !isNaN(price) && category) {
-    const newProduct = {
-      title,
-      price,
-      category,
-    };
+// close sidebar
+closeBtn.addEventListener("click", () => {
+  sideMenu.style.display = "none";
+});
 
-    products.push(newProduct);
-    updateProductList();
-    saveProductsToLocalStorage();
 
-    alert("Product added successfully!");
-  } else {
-    alert("Invalid input. Please enter valid information.");
+// change theme
+themeToggler.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme-variables");
+  
+  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+});
+
+// fill orders in table
+Orders.forEach((order) => {
+  const tr = document.createElement("tr");
+  const trContent = `
+                      <td>${order.ID + 1}</td>
+                      <td>${order.clientName}</td>
+                      <td>${order.productName}</td>
+                      <td>${order.productNumber}</td>
+                      <td>${order.paymentStatus}</td>
+                      <td class="${
+                        order.shipping === "Declined"
+                          ? "danger"
+                          : order.shipping === "Pending"
+                          ? "warning"
+                          : "success"
+                      }">${order.shipping}</td>
+                      <td class="primary">Details</td>
+                      `;
+
+  tr.innerHTML = trContent;
+  document.querySelector("table tbody").appendChild(tr);
+});
+
+// Change active sidebar
+sideBar.addEventListener("click", (event) => {
+  const clickedItem = event.target.closest("a"); // Get the closest <a> element
+
+  if (clickedItem) {
+    // Remove "active" class from all sidebar items
+    document.querySelectorAll(".sidebar a").forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    // Add "active" class to the clicked sidebar item
+    clickedItem.classList.add("active");
   }
-}
-
-// Function to update the product list on the admin page
-function updateProductList() {
-  const productList = document.getElementById("product-list");
-  productList.innerHTML = "";
-
-  products.forEach((product, index) => {
-    const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${product.title} - $${product.price.toFixed(
-      2
-    )} - ${product.category}`;
-    productList.appendChild(li);
-  });
-}
-
-// Function to save the 'products' array to localStorage
-function saveProductsToLocalStorage() {
-  localStorage.setItem("products", JSON.stringify(products));
-}
-
-// Initial update of the product list
-updateProductList();
+});
