@@ -56,7 +56,7 @@ body {
 
 .container {
     display: grid;
-    width: 98%;
+    width: 97%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto;
@@ -132,13 +132,12 @@ aside {
 }
 
 aside .top {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 1.4rem;
-    color: #0519b1;
+    color: #0519b1; /* logo color */
 }
 
 aside .close {
@@ -419,4 +418,52 @@ main .header {
 main .right .profile h3 {
     font-size: 1.2rem;
     color: var(--color-dark-variant);
+}
+
+/* ===================== MEDIA QUERIES FOR SMALL LAPTOP'S ===================== */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto;
+    }
+
+    aside h2 {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .insights>div .top_of_class .adjust {
+            padding-left: 80%;
+        }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .recent-orders table {
+        width: 83vw;
+    }
+
 }
