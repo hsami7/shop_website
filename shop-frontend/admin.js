@@ -16,11 +16,10 @@ closeBtn.addEventListener("click", () => {
   sideMenu.style.display = "none";
 });
 
-
 // change theme
 themeToggler.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme-variables");
-  
+
   themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
   themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
 });
@@ -41,7 +40,9 @@ Orders.forEach((order) => {
                           ? "warning"
                           : "success"
                       }">${order.shipping}</td>
-                      <td class="primary">Details</td>
+                      <td class="primary">
+                      <a href="details.html">Details</a>
+                      </td>
                       `;
 
   tr.innerHTML = trContent;
@@ -63,6 +64,7 @@ sideBar.addEventListener("click", (event) => {
   }
 });
 
+// dark theme by default
 if (!localStorage.getItem("theme")) {
   document.body.classList.add("dark-theme-variables");
   themeToggler.querySelector("span:nth-child(1)").classList.add("active");
@@ -71,5 +73,24 @@ if (!localStorage.getItem("theme")) {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-theme-variables");
     themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+  }
+}
+
+// show only 3 lines of recent orders table
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Call the function to initialize the table
+  initializeTable();
+});
+
+function initializeTable() {
+  var maxRowsToShow = 4;
+
+  var tbody = document.getElementById("recent-orders-body");
+  var rows = tbody.getElementsByTagName("tr");
+
+  // Hide rows exceeding the maximum
+  for (var i = maxRowsToShow; i < rows.length; i++) {
+    rows[i].style.display = "none";
   }
 }
