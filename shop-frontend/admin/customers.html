@@ -1,4 +1,4 @@
-<!-- orders.html -->
+<!-- customers.html -->
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="orders.js"></script>
-    <title>Orders</title>
+    <title>Customers</title>
 </head>
 
 <body>
@@ -32,15 +31,15 @@
                     <span class="material-symbols-outlined">dashboard</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="customers.html" class="active">
                     <span class="material-symbols-outlined">group</span>
                     <h3>Customers</h3>
                 </a>
-                <a href="orders.html" class="active">
+                <a href="orders.html">
                     <span class="material-symbols-outlined">orders</span>
                     <h3>Orders</h3>
                 </a>
-                <a href="#">
+                <a href="modify-products.html">
                     <span class="material-symbols-outlined">inventory</span>
                     <h3>Modify Products</h3>
                 </a>
@@ -58,10 +57,9 @@
         <main>
             <div class="header">
                 <div class="left">
-                    
                     <!-- <div class="date">
-                        <input type="date">
-                    </div> -->
+                                <input type="date">
+                            </div> -->
                 </div>
                 <div class="right">
                     <div class="top">
@@ -80,33 +78,60 @@
                     </div>
                 </div>
                 <div class="orders">
-                    <h2>Orders</h2>
+                    <h2>Customers List</h2>
                     <table>
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Client Name</th>
-                                <th>Product Name</th>
-                                <th>Product Number</th>
-                                <th>Payment</th>
-                                <th>Status</th>
+                                <th>Client Email</th>
+                                <th>Client Phone</th>
+                                <th>Client Address</th>
+                                <!-- <th>Status</th> -->
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <tr>
-                            <td>1</td>
-                            <td>Hatim Sami</td>
-                            <td>Water</td>
-                            <td>8753</td>
-                            <td>Paid</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr> -->
+                            <tr>
+                                <td>1</td>
+                                <td>Hatim Sami</td>
+                                <td>hatimsami@gmail.com</td>
+                                <td>0666666666</td>
+                                <td>N 63 RUE 6 Q4 LOTS HADIKA TGHAT FES</td>
+                                <!-- <td class="warning">Pending</td> -->
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Hatim Sami</td>
+                                <td>hatimsami@gmail.com</td>
+                                <td>0666666666</td>
+                                <td>N 63 RUE 6 Q4 LOTS HADIKA TGHAT FES</td>
+                                <!-- <td class="warning">Pending</td> -->
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Hatim Sami</td>
+                                <td>hatimsami@gmail.com</td>
+                                <td>0666666666</td>
+                                <td>N 63 RUE 6 Q4 LOTS HADIKA TGHAT FES</td>
+                                <!-- <td class="warning">Pending</td> -->
+                                <td class="primary">Details</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- Include your common scripts -->
                 <script src="admin.js"></script>
-</body>
 
-</html>
+                <script>// dark theme by default
+                    if (!localStorage.getItem("theme")) {
+                        document.body.classList.add("dark-theme-variables");
+                        themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+                        localStorage.setItem("theme", "dark");
+                    } else {
+                        if (localStorage.getItem("theme") === "dark") {
+                            document.body.classList.add("dark-theme-variables");
+                            themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+                        }
+                    }</script>
