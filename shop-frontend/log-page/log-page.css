@@ -63,6 +63,9 @@ body {
     overflow: hidden;
     color: var(--color-dark);
     overflow-y: auto;
+    background: url('wallpaperflare.com_wallpaper\ \(3\).jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -71,13 +74,18 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 100px;
+    padding-bottom: 1px;
+    margin-top: -20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    background: transparent;
+    backdrop-filter: blur(60px);
+    border-radius: var(--border-radius-1);
 }
 
-header h2{
+header h2 {
     color: #0519b1;
     display: flex;
     justify-content: center;
@@ -86,16 +94,17 @@ header h2{
     user-select: none;
 }
 
-.log-btn .btnLogin-popup{
-    width: 130px;
-    height: 50px;
+
+.log-btn .btnLogin-popup {
+    width: 95px;
+    height: 30px;
     background: transparent;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-background);
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    color: var(--color-primary);
+    color: var(--color-background);
     font-weight: 500;
     margin-left: 40px;
     justify-content: center;
@@ -104,8 +113,134 @@ header h2{
 }
 
 .log-btn .btnLogin-popup:hover {
-    background: var(--color-dark);
+    background: var(--color-primary);
     color: var(--color-white);
     border: var(--color-white);
     letter-spacing: 1px;
+}
+
+.wrapper {
+    position: relative;
+    width: 440px;
+    height: 400px;
+    background: transparent;
+    /* border: 2px solid rgba(255, 255, 255, .5); */
+    border-radius: var(--border-radius-3);
+    backdrop-filter: blur(30px);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .from-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .from-box h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--color-primary);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    font-weight: 500;
+    color: var(--color-dark);
+    transition: .5s;
+}
+
+.input-box input:focus~label {
+    top: -5px;
+    font-size: 1rem;
+    color: gray;
+}
+
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-size: 1.14rem;
+}
+
+.input-box .material-symbols-outlined {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--color-dark);
+    line-height: 57px;
+}
+
+.remember-forget {
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.remember-forget a,
+.login-register a {
+    text-decoration: none;
+}
+
+.remember-forget a:hover,
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 45px;
+    background: var(--color-primary);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: .5s;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.btn-submit:hover {
+    letter-spacing: 2px;
+}
+
+.login-register {
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
 }
